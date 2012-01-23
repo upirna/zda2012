@@ -1,0 +1,48 @@
+<?php 
+
+
+	$xhtml = '<div id="subMenu"><table><tr>';
+	foreach ($this->container as $page) {
+		
+	    
+		if($page->visible) {
+
+
+			$isActive = $page->isActive(true);
+       		
+			if($isActive) {
+				
+                foreach($page->pages as $subpage) {
+                    
+                    $className = '';
+                    if ($subpage->isActive()) {
+                        $className = ' class="active" ';
+                    }
+                    
+                    $xhtml .= '<td>';
+                        $xhtml .= '<a ' . $className . ' href="' . $subpage->uri . '">';
+                            $xhtml .= $subpage->title;
+                        $xhtml .= '</a>';
+                    $xhtml .= '</td>';
+                }   
+			    
+			    
+				
+			}
+		}
+	}
+	
+	$xhtml .= '</tr></table></div>';
+	
+
+
+	echo $xhtml;
+
+
+
+
+
+?>
+
+
+		

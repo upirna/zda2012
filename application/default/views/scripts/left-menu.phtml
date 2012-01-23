@@ -1,0 +1,45 @@
+<?php 
+	
+	$xhtml = '<div id="left-menu">';
+	foreach ($this->container as $page){
+		
+		if($page->visible) {
+			$isActive = $page->isActive(true);
+       		
+			if($isActive) {
+				
+				foreach($page->pages as $subpage) {
+					
+					if($subpage->isActive(true)) {
+						$xhtml .= '<div class="item">';
+							$xhtml .= str_replace('<a ', '<a class="selected"', $this->menu()->htmlify($subpage));
+						$xhtml .= '</div>';
+					} else {
+						$xhtml .= '<div class="item">';
+							$xhtml .= $this->menu()->htmlify($subpage);
+						$xhtml .= '</div>';
+					}
+					
+				}
+				
+				break;
+			}
+		}
+	}
+	
+	$xhtml .= '</div>';
+	
+	
+	if(count($page->pages)) {
+		echo $xhtml;	
+	}
+	
+
+
+
+
+
+?>
+
+
+		

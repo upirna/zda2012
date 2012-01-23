@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+
+#news {
+	width:690px;
+}
+
+#news .thumb {
+	width:135px;
+}
+
+#news .content {
+	margin-bottom:50px;
+}
+
+#news .title {
+	font-size:13px;
+	font-weight:bold;
+	margin-top:4px;
+	margin-bottom:5px;
+	border-bottom:4px solid #E0E271;
+}
+
+#news li {
+	float:left;
+	margin-left:8px;
+}
+
+#news .sociable {
+	margin-top:25px;
+}
+
+#news .sociable_tagline {
+	margin-bottom:10px;	
+	padding-left:10px;
+}	
+
+#news .socialList {
+	margin-left:25px;
+}
+	
+#newsDetails div {
+	float:left;
+	height:20px;
+}
+
+#newsDetails {
+	margin-top:5px;
+	margin-bottom:50px;
+}
+
+#newsDetails .info {
+	width:60%;
+}	
+
+
+#newsDetails .more {
+	text-align:right;
+	font-weight:bold;
+	width:40%;
+}
+
+#news .date {
+	margin-top:20px;
+}
+
+#comments {
+	margin-top:30px;
+	padding-left:20px;
+	padding-right:20px;
+}
+
+#comments .author {
+	font-weight:bold;
+}
+
+#comments .commentTitle {
+	margin-top:15px;
+}
+
+#comments .comment {
+	margin-bottom:10px;
+	margin-top:4px; 
+}
+
+
+#addComment {
+	margin-top:30px;
+	padding-left:20px;
+}
+
+#addComment th {
+	width:130px;
+	vertical-align:top;
+}
+
+#addComment .submit {
+	width:70px;
+}
+
+
+#addComment input, #addComment textarea {
+	border:1px solid #999999;
+	margin-bottom:10px;
+	width:300px;
+}
+
+
+
+
+

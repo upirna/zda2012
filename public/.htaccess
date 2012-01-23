@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !scripts/*
+RewriteCond %{REQUEST_URI} !extern/*
+RewriteRule !\.(html|js|ico|gif|jpg|png|css|swf|htc|pdf)$ index.php

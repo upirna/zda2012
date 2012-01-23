@@ -1,0 +1,55 @@
+<?php
+	
+	echo $this->translate('Hello!');
+	
+	echo '<br />';
+	echo '<br />';
+	
+	
+	echo $this->translate('On the website has been sent a request.');
+	
+	echo '<br />';
+	echo '<br />';
+	
+	echo $this->translate('Summary');
+	
+	
+	if($this->data) {
+	
+		$data = (object) $this->data;
+		
+		echo '<table>';
+			echo '<tr>';
+				echo '<th align="left">' . $this->translate('Firstname') . '</th>';
+				echo '<td>' . $data->firstname . '</td>';
+			echo '</tr>';
+			echo '<tr>';
+				echo '<th align="left">' . $this->translate('Lastname') . '</th>';
+				echo '<td>' . $data->lastname . '</td>';
+			echo '</tr>';
+			echo '<tr>';
+				echo '<th align="left">' . $this->translate('Email') . '</th>';
+				echo '<td>' . $data->email . '</td>';
+			echo '</tr>';
+			echo '<tr>';
+				echo '<th align="left">' . $this->translate('Telephone') . '</th>';
+				echo '<td>' . $data->telephone . '</td>';
+			echo '</tr>';
+			echo '<tr>';
+				echo '<th align="left">' . $this->translate('Address') . '</th>';
+				echo '<td>' . $data->address . '</td>';
+			echo '</tr>';
+		echo '</table>';
+		
+		echo '<br />';
+		echo '<br />';
+		
+		echo '<span style="font-weight:bold;">'.$this->translate('Message') . '</span><br />';
+		echo nl2br($data->message);
+	}
+	
+	
+?>
+
+
+

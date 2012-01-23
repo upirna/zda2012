@@ -1,0 +1,28 @@
+<?php 
+
+	$config = Zend_Registry::get('config');
+	$version = $config->dojo->version;
+
+	    
+	$this->dojo()->enable();
+	$this->dojo()->useCdn();
+	$this->dojo()->setLocalPath($this->baseUrl() . '/scripts/dojo/library/' . $version . '/dojo/dojo.js');
+	$this->dojo()->addStyleSheetModule('dijit.themes.tundra');
+		
+		
+		
+	if($config->dojo->useOptimizedCustomCode) {
+		$this->dojo()->registerModulePath('application', '../../../custom/production/application/');
+		$this->dojo()->registerModulePath('compressed', '../../../custom/production/compressed/');
+	} else {
+		$this->dojo()->registerModulePath('application', '../../../custom/src/application/');
+	}
+		
+		
+	$this->dojo()->setDjConfigOption('parseOnLoad', true);
+	$this->dojo()->setDjConfigOption('locale', $config->dojoLocale);
+	
+    
+
+	
+	

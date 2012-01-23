@@ -1,0 +1,37 @@
+<?php 
+
+    echo $this->subMenu;
+
+    echo '<div id="contentPage">';
+    
+        echo '<table>';
+    
+    
+        foreach ($this->sponsors as $sponsor) {
+            
+            echo '<tr>';
+                echo '<td>';      
+                    echo '<img src="' . $this->baseUrl() . '/images/sponsors/sponsors/' . $sponsor['image'] . '" alt="" />';
+                echo '</td>';
+                echo '<td>';
+                    echo '<h2>';
+                        echo $sponsor['name'];
+                    echo '</h2>';
+                    
+                    echo '<p>';
+                        echo $sponsor['shortDescription'];
+                    echo '</p>';
+                    
+                echo '</td>';
+            echo '</tr>';
+            
+            
+        }
+        
+        echo '</table>';
+    
+    
+    
+    echo '</div>';
+    
+    

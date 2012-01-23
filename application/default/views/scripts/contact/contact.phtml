@@ -1,0 +1,22 @@
+<?php 
+
+
+	if($this->contents) {
+		foreach($this->contents as $content) {
+			if($content['position'] == 'content') {
+				echo $content['content'];
+			}
+		}
+	}
+
+
+	echo '<div id="contact">';
+		echo '<div id="cinner">';
+			echo $this->form;
+		echo '</div>';
+	echo '</div>';
+		
+	echo $this->error;
+	
+	
+	

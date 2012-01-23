@@ -1,0 +1,132 @@
+<?php
+
+
+
+/**
+ * Vars
+ */
+$config = Zend_Registry::get('config');
+
+
+
+/**
+ * Render all parts of layout, including menu and
+ * content. This is important beacuse in other case view helpers
+ * will not get all appended data.
+ */
+$content = $this->layout()->content;
+$leftMenu = trim($this->leftMenu) ? $this->leftMenu : $this->left;	
+$bottomMenu = $this->bottomMenu;
+$topMenu = $this->topMenu;
+
+$googleAnalytics = $this->render('google-analytics.phtml');
+$googleWebmasterTools = $this->render('google-webmaster-tools.phtml');
+
+
+
+
+$layout  = $this->doctype();
+$layout .= '<html>';
+	$layout .= '<head>';
+	
+		
+		/**
+		 * Charset
+		 */
+		$layout .= $this->headMeta()->appendHttpEquiv('Content-Type', 'text/html; charset=UTF-8');
+            
+			
+		/**
+		 * Stylesheet
+		 */
+		$this->headLink()->appendStylesheet($this->baseUrl() . '/styles/base.css');
+		$this->headLink()->appendStylesheet($this->baseUrl() . '/styles/style4.css');
+		$layout .= $this->headLink();
+		
+		
+		/**
+		 * Head title
+		 */
+        $layout .= $this->headTitle($this->translate('USA trip 2012'));
+            
+            
+		/**
+		 * Head style
+		 */
+		$layout .= $this->headStyle(); 
+			
+			
+		/**
+		 * Head meta
+		 */
+		$layout .= $this->headMeta();
+			
+	    
+		/**
+		 * Javascript
+		 */
+		$this->headScript()->captureStart();
+			echo "var baseUrl = '" . $this->baseUrl() . "';";
+		$this->headScript()->captureEnd(); 	
+	    $layout .= $this->headScript();	
+
+        
+        
+	    $layout .= $googleAnalytics;
+	    $layout .= $googleWebmasterTools;
+		
+		
+	    require_once dirname(__FILE__) . '/dojo.phtml';
+	    $layout .=  $this->dojo(); 	  
+			
+	    
+	    
+	    
+	$layout .= '</head>';
+	
+	$layout .= '<body class="tundra">';
+
+	    $layout .= '<div id="headLine"></div>';
+	
+	    $layout .= '<div align="center">';
+    	    $layout .= '<div id="mainFrame" align="left">';
+    	    
+
+    	        $layout .= $this->render('header-frame.phtml');
+    	    
+    	        
+                $layout .= $this->render('intro-frame.phtml');
+    	        
+    	        
+    	        $layout .= '<div id="contentFrame">';
+    	            $layout .= $content;
+    	        $layout .= '</div>';
+    	    
+    	        $layout .= '<div id="line"></div>';
+    	        
+    	        $layout .= '<div id="bottom" align="center">';
+	    	        $layout .= '<table><tr>';
+	    	        $layout .= '<td><div>' . $this->bottomMenu . '</div>';
+	    	        $layout .= '<div>Copright Društvo elektrotehnikov - stromar.si, 2012</div></td>';
+	    	        $layout .= '<td><img id="logoBottom" src="' . $this->baseUrl() . '/images/zda2012/logo.png" /></td>';
+	    	        $layout .= '</tr></table>';
+    	        $layout .= '</div>';
+    	        
+    	    $layout .= '</div>';
+	    $layout .= '</div>';
+	    
+	    
+		
+		
+	$layout .= '</body>';			
+$layout .= '</html>';
+	
+
+echo $layout;
+
+
+	
+	
+?>
+
+

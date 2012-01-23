@@ -1,0 +1,32 @@
+<?php 
+
+
+	$xhtml = '';
+	$first = true;
+	foreach ($this->container as $page){
+		
+		if($page->visible) {
+			
+			if($first === false) {
+			    $xhtml .= ' | ';
+			}
+			
+			$xhtml .=  $this->menu()->htmlify($page);
+			
+			$first = false;
+		}
+	}
+	
+	$xhtml .= '';
+	
+	
+	echo $xhtml;
+
+
+
+
+
+?>
+
+
+		

@@ -1,0 +1,44 @@
+<?php 
+
+
+echo '<div id="contentPage">';
+
+    echo $this->subMenu;
+    
+    
+    
+    echo '<div>';
+    echo '<table>';
+    
+    
+    
+        foreach ($this->companies as $company) {
+            
+            $image = $company['image'];
+            $name = $company['name'];
+            $description = $company['description'];
+        
+            echo '<tr>';
+                echo '<td>';
+                    echo '<img class="companyLogo" src="' . $this->baseUrl() . '/images/companies/' . $image . '" />';
+                echo '</td>';
+                
+                echo '<td>';
+                    echo '<h2>';
+                        echo $name;
+                    echo '</h2>';
+                    echo '<p>';
+                        echo $description;
+                    echo '</p>';
+                echo '</td>';
+            
+            echo '</tr>';
+        
+        }
+    
+    echo '</table>';
+    echo '</div>';
+
+
+echo '</div>';
+

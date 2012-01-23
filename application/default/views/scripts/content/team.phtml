@@ -1,0 +1,71 @@
+<?php 
+
+echo '<div id="contentPage">';
+
+    echo '<h1>';
+        echo 'Ekipa';
+    echo '</h1>';
+
+    
+    
+    echo '<p class="toffParagraph">';
+        echo 'Skupina osmih študentov Fakultete za elektrotehniko, Univerze v Ljubljani se v okviru Društva elektrotehnikov – stromar.si 15. marca podaja na enomesečno strokovno ekskurzijo po Združenih državah Amerike. Velika želja po obisku nekaterih vodilnih svetovnih podjetij in univerz je tako zagotovo skupna točka vseh naših članov ekskurzije.';
+    echo '</p>';
+    
+    
+    foreach ($this->members as $member) {
+        
+        $id = $member['teamMemberId'];
+        $fullName = $member['firstname'] . ' ' . $member['lastname'];
+        $email = $member['email'];
+        $work = nl2br($member['work']);
+        $education = nl2br($member['education']);
+        $image = $member['image'];
+        $date = new Zend_Date($member['date_of_birth']);
+        
+        echo '<table>';
+            echo '<tr>';
+    
+                echo '<td valign="top">';
+                
+                    echo '<h2 class="teamMemberName">';
+                        echo $fullName;
+                    echo '</h2>';
+                    
+                    
+                    echo '<div class="teamMemberDescription">';
+                        echo '<p class="basicParapgraph">';
+                            echo 'E-pošta ' . $email . '<br />';
+                            echo 'Datum rojstva ' . $date->get(Zend_Date::YEAR) . '<br />';
+                            echo '<a id="link-' . $id . '" class="showMoreLink">Prikaži podrobnosti</a>';
+                        echo '</p>';
+                        
+                        echo '<div style="display:none;" id="details-' . $id . '" class="details">';
+                            echo '<p class="basicParapgraph">';
+                                echo '<b>DELOVNE IZKUŠNJE </b><br>';
+                                echo $work;
+                            echo '</p>';
+                                
+                            
+                            echo '<p class="basicParapgraph">';
+                                echo '<b>IZOBRAŽEVANJE </b><br>';
+                                echo $education;
+                            echo '</p>';
+                        echo '</div>';
+                    
+                    echo '</div>';
+                    
+                    
+                echo '</td>';
+                    
+                    echo '<td valign="top">';
+                    echo '<img src="' . $this->baseUrl() . '/images/team/' . $image . '" />';
+                    echo '</td>';
+            echo '</tr>';
+        
+        
+        
+        echo '</table>';
+    }
+    
+ echo '</div>';

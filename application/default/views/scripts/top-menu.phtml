@@ -1,0 +1,62 @@
+<?php 
+
+
+	$xhtml = '<div id="topMenu"><ul>';
+	foreach ($this->container as $page) {
+		
+	    
+		if($page->visible) {
+
+
+			$isActive = $page->isActive(true);
+       		
+			if($isActive) {
+				
+                $xhtml .= '<li>';
+                    $xhtml .= '<a href="' . $page->uri . '" class="active">';
+                    
+                        if ($page->image) {
+                            $url = $this->baseUrl() . '/images/zda2012/menu/' . $page->image;
+                            $xhtml .= '<img src="' . $url . '" />';
+                        } else {
+                            $xhtml .= $page->title;
+                        }
+                    
+                        
+                    $xhtml .= '</a>';
+                $xhtml .= '</li>';	    
+			    
+			    
+				
+			} else {
+			    
+                $xhtml .= '<li>';
+                    $xhtml .= '<a href="' . $page->uri . '">';
+                    
+                        if ($page->image) {
+                            $url = $this->baseUrl() . '/images/zda2012/menu/' . $page->image;
+                            $xhtml .= '<img src="' . $url . '" />';
+                        } else {
+                            $xhtml .= $page->title;
+                        }
+                    
+                    $xhtml .= '</a>';
+                $xhtml .= '</li>';
+			}
+		}
+	}
+	
+	$xhtml .= '</ul></div>';
+	
+
+
+	echo $xhtml;
+
+
+
+
+
+?>
+
+
+		

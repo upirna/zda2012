@@ -1,0 +1,56 @@
+<?php
+
+$this->headLink()->appendStylesheet($this->baseUrl() . '/styles/sponsors.css');
+
+ 
+
+$this->headScript()->appendFile($this->baseUrl() . '/scripts/sponsors/jquery.flip.min.js');
+$this->headScript()->appendFile($this->baseUrl() . '/scripts/sponsors/script.js');
+
+
+
+echo '<div id="mainSponsorBox">';
+echo '<div class="sponsorListHolder">';
+
+    if (is_array($this->bottomSponsors)) { 
+        foreach ($this->bottomSponsors as $company) {
+
+            $image = $company['image'];
+            $shortDescription = $company['shortDescription'];
+            $companyName = $company['name'];
+            $url = $company['url'];
+            $type = $company['type'];
+
+            if (!$type or $type == 'others' or !$image) {
+                continue;
+            }
+            
+            
+            $sponsorImgUrl  = $this->baseUrl();
+            $sponsorImgUrl .= '/images/sponsors/sponsors/';
+            $sponsorImgUrl .= $image;
+
+
+            echo '<div class="sponsor" title="Click to flip">';
+                echo '<div class="sponsorFlip">';
+                    echo '<img src="' . $sponsorImgUrl .'" alt="More about '. $companyName . '" />';
+                echo '</div>';
+
+                echo '<div class="sponsorData">';
+                    echo '<div class="sponsorDescription">';
+                        echo $companyName;
+                    echo '</div>';
+                    echo '<div class="sponsorURL">';
+                        echo '<a href="' . $url . '">';
+                            echo $companyName;
+                        echo '</a>';
+                    echo '</div>';
+                echo '</div>';
+            echo '</div>';			
+
+         }
+     }
+                                    
+echo '</div>';
+echo '</div>';
+

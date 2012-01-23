@@ -1,0 +1,136 @@
+<?php 
+
+
+
+    
+echo '<table><tr>';
+
+    echo '<td valign="top">';
+
+        /**
+         * Main news
+         */
+        echo '<div id="introNews">';
+
+            echo '<img class="titleImage" src="' . $this->baseUrl() . '/images/zda2012/welcome.png" />';
+        
+            echo '<table>';
+                echo '<tr>';
+                    echo '<td valign="top">';
+                        echo '<img src="' . $this->baseUrl() . '/images/zda2012/team.jpg" />';
+                    echo '</td>';
+                    echo '<td valign="top">';
+                        echo '<div id="introNewsDescription">';
+                            echo '<h2>';
+                                echo 'Tradicionalno ekskurzijo v ZDA študentov zadnjih letnikov Fakultete za elektrotehniko Ljubljana tudi letos.';
+                            echo '</h2>';
+                            echo 'Letošnjo ekipo sestavlja 8 članov. Pot bomo začeli v LA, nato pa si bomo ogledali Silicijevo dolino. Sledili bodo ogledi narodnih parkov in glavnega mesta Washington.';
+                        echo '</div>';
+                    echo '</td>';
+                echo '</tr>';
+            echo '</table>';
+            
+            
+            echo '<ul id="readMore">';
+                echo '<li>';
+                    echo '<a href="' . $this->url(array(), 'companies') . '">';
+                        echo 'Ogled Silicijeve doline. Katera podjetja namervamo obiskati.';
+                    echo '</a>';
+                echo '</li>';
+                echo '<li>';
+                    echo '<a href="' . $this->url(array(), 'timeline') . '">';
+                        echo 'Časovni okvir eksukrzije';
+                    echo '</a>';
+                echo '</li>';
+            echo '</ul>';
+            
+        echo '</div>'; 
+
+    echo '</td>';
+    echo '<td valign="top">';
+    
+        /**
+         * Short news
+         */
+        echo '<img class="titleImage" src="' . $this->baseUrl() . '/images/zda2012/short-news.png" />';     
+    
+    
+        echo '<div class="shortNewsItem">';
+            echo '<h2 class="shortNews">';
+                echo 'Ekipa je dokončno sestavljena';
+            echo '</h2>';
+            
+            echo '<div>';
+                echo '<a href="' . $this->url(array(), 'team') . '">';
+                    echo 'Oglejte si predstavitev članov.';
+                echo '</a>';
+            echo '</div>';
+
+            echo '<div class="dotline"></div>';
+        echo '</div>';
+        
+        
+        echo '<div class="shortNewsItem">';
+            echo '<h2 class="shortNews">';
+                echo 'Društvo elektrotehnikov - stromar.si se je odločilo za sestavo ekipe.';
+            echo '</h2>';
+       
+            
+            echo '<div class="dotline"></div>';
+        echo '</div>'; 
+    
+    
+    echo '</td>';
+echo '</tr>';
+
+echo '<tr>';
+    echo '<td>';
+        echo '<div id="underSponsors"></div>';
+    echo '</td>';
+    echo '<td>';
+    echo '</td>';
+echo '</tr>';
+
+echo '<tr>';
+    echo '<td valign="top">';
+        echo $this->render('index/facebook.phtml');
+    echo '</td>';
+    echo '<td  valign="top" align="right">';
+        echo $this->render('index/twitter.phtml');
+    echo '</td>';
+echo '</tr>';
+
+/*echo '<tr>';
+    echo '<td colspan="2">';
+        echo $this->render('sponsors.phtml');
+    echo '</td>';
+echo '</tr>';*/
+
+
+
+echo '<tr>';
+    echo '<td colspan="2">';
+        //echo $this->render('index/packages.phtml');
+    echo '</td>';
+echo '</tr>';
+
+echo '<tr>';
+    echo '<td colspan="2">';
+        echo $this->render('sponsors.phtml');
+    echo '</td>';
+echo '</tr>';
+
+
+
+echo '</table>';
+
+
+
+
+
+
+
+
+
+    
+    

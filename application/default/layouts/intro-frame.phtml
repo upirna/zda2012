@@ -1,0 +1,54 @@
+<?php 
+
+
+$videoBlogUrl = $this->url(array(
+    'module' => 'gallery',
+    'controller' => 'video',
+    'action' => 'index'        
+), 'default');
+
+$blogUrl = $this->url(array(
+    'module' => 'blog',
+    'controller' => 'index',
+    'action' => 'index'        
+), 'default');
+
+$galleryUrl = $this->url(array(
+    'module' => 'gallery',
+    'controller' => 'index',
+    'action' => 'index'
+), 'default');
+
+
+$layout = '<div id="introFrame">';
+    
+    $layout .= '<table>';
+        $layout .= '<tr>';
+            $layout .= '<td>';
+                $layout .= '<img src="' . $this->baseUrl() . '/images/zda2012/intro.jpg" />';
+            $layout .= '</td>';
+            $layout .= '<td>';
+            
+                $layout .= '<a href="' . $videoBlogUrl . '">';
+                    $layout .= '<img id="videoblog" src="' . $this->baseUrl() . '/images/zda2012/videodnevnik.png" />';
+                $layout .= '</a>'; 
+                
+                $layout .= '<a href="' . $blogUrl . '">';
+                    $layout .= '<img id="blog" src="' . $this->baseUrl() . '/images/zda2012/blog.png" />';
+                $layout .= '</a>';
+                
+                $layout .= '<a href="' . $galleryUrl . '">';
+                    $layout .= '<img id="gallery" src="' . $this->baseUrl() . '/images/zda2012/gallery.png" />';
+                $layout .= '</a>';
+                
+                $layout .= '<img id="beWithUs" src="' . $this->baseUrl() . '/images/zda2012/spremljaj-nas.png" />';
+            
+            
+            $layout .= '</td>';
+        $layout .= '</tr>';
+    $layout .= '</table>';
+
+
+$layout .= '</div>';
+
+echo $layout;

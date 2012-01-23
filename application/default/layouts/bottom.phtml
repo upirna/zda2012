@@ -1,0 +1,33 @@
+<?php 
+
+
+$layout .= '<div id="bottom" align="center">';
+
+    if (is_array($this->bottomSponsors)) { 
+        foreach ($this->bottomSponsors as $company) {
+
+        	$image = $company['image'];
+        	$shortDescription = $company['shortDescription'];
+        	$companyName = $company['name'];
+        	$url = $company['url'];
+        	$type = $company['type'];    	
+        	
+        	$sponsorImgUrl  = $this->baseUrl();
+        	$sponsorImgUrl .= '/images/sponsors/sponsors/';
+        	$sponsorImgUrl .= $image;  	
+        	
+        	if ($image) {
+        		if ($type == 'gold' || $type == 'silver' || $type == 'bronze') {
+        			$layout .= '<a href="' . $url . '">';
+        				$layout .= '<img style="margin-right:20px;" width="90px" src="' . $sponsorImgUrl .'" alt="" />';
+        			$layout .= '</a>';	
+        		}
+        	}
+        	
+        }
+    }    
+
+
+$layout .= '</div>';
+
+echo $layout;

@@ -1,0 +1,59 @@
+<?php 
+
+    	        
+$layout = '<div id="headerFrame" align="left">';
+    $layout .= '<table><tr>';
+        $layout .= '<td valign="top">';
+            
+                $layout .= '<a id="logo" href="' . $this->absBaseUrl() . '"></a>';
+            
+        $layout .= '</td>';
+        $layout .= '<td valign="top">';
+            
+            $layout .= '<table><tr><td>';
+                $layout .= '<div id="countdown" align="right"></div>';
+                $layout .= '</td><td valign="top">';
+                    $layout .= '<a href="' . $this->changeLangUrl . '">';
+                        $layout .= '<img id="changeLanguage" src="' . $this->baseUrl() . '/images/zda2012/en.jpg" alt="" />';
+                    $layout .= '</a>';
+                $layout .= '</td></tr></table>';
+                
+           
+            /**
+             * Searcher
+             */
+            /*$layout .= '<div id="searcherFrame" align="right">';         
+                $layout .= '<table>';
+                    $layout .= '<tr>';
+                        $layout .= '<td>';
+                            $layout .= $this->translate('Search');
+                        $layout .= '</td>';
+                        $layout .= '<td>';
+                            $layout .= '<input type="text" id="searcher" />';
+                        $layout .= '</td>';
+                        $layout .= '<td>';
+                            $layout .= '<img src="' . $this->baseUrl() . '/images/zda2012/search-si.gif" />';                                        
+                        $layout .= '</td>';
+                    $layout .= '</tr>';
+                $layout .= '</table>';
+            $layout .= '</div>';*/
+            
+            
+            /**
+             * Menu
+             */
+            if ($this->showTopMenu !== false) {
+                $layout .= $this->topMenu;
+            }
+            
+            
+        
+        
+        
+        $layout .= '</td>';
+    $layout .= '</tr></table>';
+$layout .= '</div>';
+
+
+echo $layout;
+

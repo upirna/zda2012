@@ -1,0 +1,310 @@
+
+body
+{
+	background-image:url(../images/zda2012/bg.gif);
+	background-repeat:no-repeat;
+	background-position:center top;
+}
+
+
+#headLine
+{
+	height:10px;
+	background-color:#2f2f2f;
+}
+
+#mainFrame
+{
+	width:775px;
+}
+
+#headerFrame
+{
+	background-image:url(../images/zda2012/header.gif);
+	height:117px;
+	padding-bottom:20px;
+	margin-bottom:10px;
+}
+
+
+#searcherFrame,
+#countdown
+{
+	width:430px;
+	margin-top:10px;
+	height:39px;
+}
+
+#countdown
+{
+    font-size:11px;
+}
+
+#searcherFrame,
+#searcherFrame td
+{
+	font-size:10px;
+}
+
+#logo
+{
+	width:310px;
+	height:117px;
+	display:block;
+}
+
+#contentFrame
+{
+	margin-top:20px;
+	background-repeat:no-repeat;
+	background-image:url(../images/zda2012/content-frame-bg.gif);
+	padding-left:20px;
+	padding-top:20px;
+}
+
+#searcher
+{
+	border: 1px solid #e7e7e7;
+	height:20px;
+	width:130px;
+	margin-left:10px;
+	font-size:11px;
+	padding-left:4px;
+	margin-right:4px;
+}
+
+#topMenu
+{
+	margin-left:0px;
+}
+
+#topMenu li
+{
+	float:left;
+}
+
+#introFrame
+{
+	padding-left:30px;	
+}
+
+#contentFrame #introNews
+{
+	width:490px;
+}
+
+#contentFrame .titleImage
+{
+	margin-bottom:17px;
+}
+
+#contentFrame h2.shortNews
+{
+	background-image: url(../images/zda2012/short-news-icon.png);
+	background-position:left top;
+	background-repeat:no-repeat;
+	padding-left:23px;
+	margin-bottom:8px;
+}
+
+
+#contentFrame .shortNewsItem
+{
+	margin-left:6px;
+	margin-bottom:10px;
+	padding-right:15px;
+}
+
+#contentFrame .dotline
+{
+	background-image: url(../images/zda2012/dot-line.png);
+	height:1px;
+	width:167px;
+	margin-top:20px;
+}
+
+#contentFrame #introNewsDescription
+{
+	padding-left:10px;
+    margin-right:20px;
+}
+
+#contentFrame #readMore
+{
+	margin-top:20px;
+}
+
+#contentFrame #readMore li
+{
+	list-style-image: url(../images/zda2012/arrow.gif);
+	padding:3px;
+}
+
+#contentFrame #packages
+{
+	height:168px;
+	width:715;
+}
+
+#contentFrame #packages .package
+{
+	width:189px;
+	height:168px;
+	text-align: justify;
+}
+
+#line
+{
+	margin-top:35px;
+	height:7px;
+	background-color:#2f2f2f;
+	margin-bottom:20px;
+}
+
+#bottom
+{
+	margin-bottom:35px;
+}
+
+#logoBottom
+{
+	margin-left:15px;
+}
+
+#contentPage
+{
+	padding-right:20px;
+}
+
+#contentPage p.toffParagraph
+{
+	font-size:12px;
+	line-height:20px;
+	text-align: justify;
+	margin-bottom:25px;
+}
+
+#contentPage td
+{
+	font-size:12px;
+	line-height:20px;
+	padding:5px;	
+}
+
+#contentPage h1
+{
+	margin-bottom:15px;
+}
+
+#contentPage .teamMemberName
+{
+	font-size:14px;
+}
+
+#contentPage .showMoreLink
+{
+	cursor:pointer;
+}
+
+#contentPage div
+{
+	font-size:12px;
+}
+
+#contentPage p.basicParapgraph
+{
+	padding-bottom:15px;
+}
+
+#contentPage .teamMemberDescription
+{
+	width:450px;
+	padding-right:30px;
+}
+
+#bottom a
+{
+	color:black;
+	text-transform:uppercase
+}
+
+#subMenu a
+{
+	color:black;
+	font-size:12px;
+	font-weight:bold;
+	margin-right:35px;
+}
+
+#subMenu a.active
+{
+	text-decoration:underline;
+}
+
+.companyLogo
+{
+	padding:7px;
+}
+
+#blog .blogItem
+{
+	margin-top:10px;
+	padding-right:20px;
+	text-align:justify;
+}
+
+#underSponsors
+{
+    height: 20px;
+}
+
+#offerTable th
+{
+    font-size:12px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+#offerTable td
+{
+    padding:5px;
+    border-bottom: 1px #cdcdcd dashed;
+}
+
+#offerTable .checked
+{
+	background-image:url(../images/zda2012/checked-green.png);  
+    background-repeat: no-repeat;
+    background-position: center;
+    width:24px;
+    height:36px;
+}
+
+#offerTable .sType
+{
+    width:60px;
+    text-align: center;
+}
+
+#sponsorTypeTable
+{
+    margin-bottom:30px;
+}
+
+#sponsorTypeTable td
+{
+    font-size:18px;
+}
+
+#sponsorTypeTable .amount
+{
+    font-size:12px;
+    padding-top:6px;
+    padding-left:60px;
+}
+
+#changeLanguage
+{
+    margin-top:10px;
+    margin-left:20px;
+}

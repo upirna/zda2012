@@ -1,0 +1,49 @@
+<?php 
+
+echo '<div id="contentPage">';
+
+    echo $this->subMenu;
+    
+    
+    echo '<table>';
+    
+    
+    
+        foreach ($this->events as $event) {
+            
+            $description = $event['description'];
+            $start = new Zend_Date($event['start'], Zend_Date::ISO_8601);
+            
+            $end = null;
+            if ($event['end']) {
+                $end = new Zend_Date($event['end'], Zend_Date::ISO_8601);
+            }
+            
+            
+            
+            echo '<tr>';
+                echo '<td style="width:120px;">';
+                    echo $start->get(Zend_Date::DATE_LONG);
+                echo '</td>';
+                
+                echo '<td style="width:120px;">';
+                    if ($end) {
+                        echo $end->get(Zend_Date::DATE_LONG);
+                    }
+                echo '</td>';
+                
+                echo '<td>';
+                    echo '<p>';
+                        echo $description;
+                    echo '</p>';
+                echo '</td>';
+            
+            echo '</tr>';
+        
+        }
+    
+    echo '</table>';
+    
+    
+    
+echo '</div>';

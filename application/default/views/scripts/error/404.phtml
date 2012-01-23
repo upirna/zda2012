@@ -1,0 +1,43 @@
+<?php 
+
+echo '<div id="error">';
+	
+
+	echo '<h1>';
+		echo $this->translate('Page does not exist!');
+	echo '</h1>';
+
+	
+		
+		echo '<div>';
+			echo '<table id="errorTable">';
+				echo '<tr>';
+					echo '<td>';
+						echo $this->translate('Type');
+					echo '</td>';
+					echo '<td>';
+						echo $this->error->type;
+					echo '</td>';
+				echo '</tr>';
+				echo '<tr>';
+					echo '<td>';
+						echo $this->translate('Exception');
+					echo '</td>';
+					echo '<td>';
+						echo $this->error->exception;
+					echo '</td>';
+				echo '</tr>';
+			
+			echo '</table>';
+		
+		echo '</div>';
+		
+		
+	
+	
+
+
+
+echo '</div>';
+
+?>

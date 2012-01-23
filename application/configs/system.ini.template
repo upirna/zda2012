@@ -1,0 +1,23 @@
+[production]
+
+; Path to Zend Framework, for instance "C:\Zend_Framework\1.10.2" on Windows
+; or "/var/zend_framework/1.10.2" on Linux systems
+framework = /var/zend_framework/latest
+
+; Dojo
+dojo.path = /var/dojo
+
+; Path to tinyMCE
+tinymce.path = /var/tiny_mce/latest
+
+; Path to magic files. Correct is needed to provide fully functional
+; mime type recognition and correct validation of file types.
+; Typical value for Linux systems is "/usr/share/file/magic" or
+; on Windows "C:\Apache\php\extras\finfo\magic".
+magic.file = "usr/share/file/magic"
+
+; Path to PHPExcel
+phpexcel.path = /var/PHPExcel_1.7.6/Classes
+
+[development : production]
+;

@@ -1,0 +1,23 @@
+<?php
+
+echo $this->translate('Hello!') . "\n\n";
+
+echo $this->translate('On the website you have sent a request.') . "\n\n";
+
+echo $this->translate('Summary') . "\n\n";
+
+if($this->data) {
+	$data = (object) $this->data;
+	
+	echo $this->translate('Firstname') . ' ' . $data->firstname . "\n";
+	echo $this->translate('Lastname') . ' ' . $data->lastname . "\n";
+	echo $this->translate('Email') . ' ' . $data->email . "\n";
+	echo $this->translate('Telephone') . ' ' . $data->telephone . "\n";
+	echo $this->translate('Address') . ' ' . $data->address . "\n";
+	echo $this->translate('Your wishes') . "\n";
+	echo $data->message;
+}
+
+	echo $this->translate('Thank you. We will answer you as soon as possible.') . "\n\n";
+	
+	echo $this->translate('Your company name');

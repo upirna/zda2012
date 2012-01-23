@@ -1,0 +1,42 @@
+<?php 
+
+echo '<div class="album">';
+
+	echo '<div class="albumName">';
+		echo $this->gallery['name'];
+	echo '</div>';
+	
+	
+	if(is_array($this->items)) {
+		foreach($this->items as $item) {
+			
+			$group = 'album-' . $item['albumId'];
+			
+			$thumbnail = $this->url(array(
+				'module' => 'default',
+				'controller' => 'file',
+				'action' => 'file',
+				'file' => $item['file'],
+				'path' => $item['pathCode'],
+				'width' => '210'
+			), 'default', true);
+			
+			$imageUrl = $this->url(array(
+				'module' => 'default',
+				'controller' => 'file',
+				'action' => 'file',
+				'file' => $item['file'],
+				'path' => $item['pathCode'],
+				'width' => '800'
+			), 'default', true);
+			
+			
+			echo '<a href="' . $imageUrl . '" dojotype="dojox.image.Lightbox" group="' . $group . '">';
+				echo '<img class="albumItem" src="' . $thumbnail . '" />';
+			echo '</a>';
+			
+		}
+	}
+	
+echo '</div>';
+

@@ -1,0 +1,122 @@
+
+
+
+#mainSponsorBox .sponsorListHolder{
+	margin-bottom:30px;
+}
+
+#mainSponsorBox .sponsor{
+	width:143px;
+	height:143px;
+	float:left;
+	margin:4px;
+	
+	/* Giving the sponsor div a relative positioning: */
+	position:relative;
+	cursor:pointer;
+}
+
+#mainSponsorBox .sponsorFlip{
+	/*  The sponsor div will be positioned absolutely with respect
+		to its parent .sponsor div and fill it in entirely */
+
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	border:1px solid #ddd;	
+	background:url("../images/sponsors/background.jpg") no-repeat center center #f9f9f9;
+}
+
+#mainSponsorBox .sponsorFlip:hover{
+	border:1px solid #999;
+	
+	/* CSS3 inset shadow: */
+	-moz-box-shadow:0 0 30px #999 inset;
+	-webkit-box-shadow:0 0 30px #999 inset;
+	box-shadow:0 0 30px #999 inset;
+}
+
+#mainSponsorBox .sponsorFlip img{
+	/* Centering the logo image in the middle of the sponsorFlip div */
+	
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-70px 0 0 -70px;
+}
+
+#mainSponsorBox .sponsorData{
+	/* Hiding the .sponsorData div */
+	display:none;
+}
+
+#mainSponsorBox .sponsorDescription{
+	font-size:11px;
+	padding:50px 10px 20px 20px;
+	font-style:italic;
+}
+
+#mainSponsorBox .sponsorURL{
+	font-size:10px;
+	font-weight:bold;
+	padding-left:20px;
+}
+
+#mainSponsorBox .clear{
+	/* This class clears the floats */
+	clear:both;
+}
+
+
+/* The styles below are only necessary for the styling of the demo page: */
+
+#mainSponsorBox  #main{
+	position:relative;
+	margin:0 auto;
+	width:960px;
+}
+
+#mainSponsorBox h1{
+	padding:30px 0;
+	text-align:center;
+	text-shadow:0 1px 1px white;
+	margin-bottom:30px;
+	background:url("img/page_bg.gif") repeat-x bottom #f8f8f8;
+}
+
+#mainSponsorBox h1, #mainSponsorBox h2{
+	font-family:"Myriad Pro",Arial,Helvetica,sans-serif;
+}
+
+#mainSponsorBox h2{
+	font-size:14px;
+	font-weight:normal;
+	text-align:center;
+	
+	position:absolute;
+	right:40px;
+	top:40px;
+}
+
+#mainSponsorBox .note{
+	font-size:12px;
+	font-style:italic;
+	padding-bottom:20px;
+	text-align:center;
+}
+
+#mainSponsorBox a, #mainSponsorBox a:visited {
+	color:#0196e3;
+	text-decoration:none;
+	outline:none;
+}
+
+#mainSponsorBox a:hover{
+	text-decoration:underline;
+}
+
+#mainSponsorBox a img{
+	border:none;
+}

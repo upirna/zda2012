@@ -1,0 +1,37 @@
+/* CSS Document */
+
+#contact .intro {
+	margin-top:15px;
+}
+
+#contact td {
+	padding:3px;
+}
+
+#contact  .element {
+	padding-left:50px;
+}
+
+#contact .errors {
+	color:#FF0000;
+	padding-top:3px;
+	padding-left:10px;
+}
+
+#contact #cinner {
+	padding-left:50px;
+}
+
+#contact input, #contact textarea {
+	background-color:#FFFFFF;
+	border-color:#666666;
+	border-style:solid;
+	border-width:1px;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:11px;
+	width:450px;
+}
+
+#contact #submit {
+	width:60px;
+}

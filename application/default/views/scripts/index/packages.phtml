@@ -1,0 +1,71 @@
+<?php 
+
+$letterOfSupportFile = $this->baseUrl() . '/uploads/podporno-pismo.pdf';
+
+echo '<div id="packages" align="center">';
+
+    echo '<table>';
+        echo '<tr>';
+            echo '<td>';
+        
+                echo '<div class="package">';
+                
+                    echo '<a href="' . $this->url(array(), 'sponsors') . '">';
+                        echo '<img class="titleImage" src="' . $this->baseUrl() . '/images/zda2012/sponsor-package.png" />';
+                    echo '</a>';
+            
+                    echo '<h2><a href="' . $this->url(array(), 'sponsors') . '">Želite biti sponzor naše strokovne ekskurzije?</a></h2>';
+                    echo ' Potem si oglejte sponzorski paket. ';
+                    echo 'Lahko se tudi sestanete z našo ekipo in skupaj bomo našli usrezno rešitev.';
+                    
+                echo '</div>';
+            echo '</td>';
+            
+            echo '<td style="width:50px;"></td>';
+            
+            echo '<td>';
+            
+                echo '<div class="package">';
+                    
+                    echo '<a target="_blank" href="' . $letterOfSupportFile . '">';
+                        echo '<img class="titleImage" src="' . $this->baseUrl() . '/images/zda2012/letter-of-support.png" />';
+                    echo '</a>';
+                        
+                    echo '<h2>';
+                         echo '<a target="_blank" href="' . $letterOfSupportFile . '">';
+                             echo 'Zvesti podpornik ekskurzije v ZDA je tudi Fakulteta za elektrotehniko';
+                         echo '</a>';
+                    echo '</h2>';
+                    
+                    echo 'Zavaljujemo se naši fakulteti za podporo, ki so jo izkazali tudi z ';
+                    echo '<a href="' . $letterOfSupportFile . '" target="_blank">uradnim podpornim pismom.</a>';
+                    
+                echo '</div>';
+            
+            echo '</td>';
+            
+            echo '<td style="width:60px;"></td>';
+            
+            echo '<td>';
+            
+                echo '<div class="package">';
+                    echo '<a href="' . $this->url(array(), 'team') . '">';
+                        echo '<img class="titleImage" src="' . $this->baseUrl() . '/images/zda2012/team-speech.png" />';
+                    echo '</a>';
+                    
+                    echo '<h2>';
+                        echo '<a href="' . $this->url(array(), 'team') . '">';
+                            echo 'Odštevamo minute do začetka';
+                        echo '</a>';
+                    echo '</h2>';
+                    
+                    echo 'Kratek nagovor in obrazložitev, zakaj smo se odločili, da se podamo na pot.';
+                    
+                echo '</div>';
+            
+            echo '</td>';
+        
+        echo '</tr>';
+    echo '</table>';
+
+echo '</div>';

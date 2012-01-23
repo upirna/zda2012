@@ -1,0 +1,9 @@
+[production]
+
+; database
+resources.db.params.host = "localhost"
+resources.db.params.username = "user"
+resources.db.params.password = "pwd"
+resources.db.params.dbname = "dbname"
+
+[development : production]
